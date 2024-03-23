@@ -1,0 +1,16 @@
+---
+title: Quarto-manuscript01
+authors:
+  - name: Robert C. Cline, Sr.
+    affiliation: Golden Triangle Land Services, Inc.
+    roles: writing
+    corresponding: true
+bibliography: references.bib
+---
+
+## Section
+This is a simple placeholder for the manuscript's main document [@knuth84].
+
+**Note**: a git clone distributee merely runs *quarto render index.qmd* to generate the quarto files that were 
+listed as .quarto/ in the .gitignore file.  
+

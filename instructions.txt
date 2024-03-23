@@ -1,0 +1,42 @@
+---
+title: "Instructions"
+editor: visual
+---
+
+## [Quarto Manuscripts](https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s) 
+
+Jupyter and Quarto noteboos as a primary element of the scientific record. \
+Publish to GitHub Pages, Netlify etc.\
+Project type: manuscript \
+Give access via a website
+
+Instructions
+
+In console:\
+***quarto create project manuscript \<name\>***
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+[Notebooks Now!](https://data.agu.org/notebooks-now/)
+
+Notebooks Now! The Future of Reproducible Research\
+<https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023EA003458> \
+
+## Create a new project
+
+## In Terminal:  quarto create project manuscript indo-rct
+
+## 
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
