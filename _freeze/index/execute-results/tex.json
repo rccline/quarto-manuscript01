@@ -1,0 +1,15 @@
+{
+  "hash": "53bdebe73c2d4affca7ada6790822800",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Quarto-manuscript01  \nsubtitle: Reproduction  \nauthors:\n  - name: Robert C. Cline, Sr.\n    affiliation: Golden Triangle Land Services, Inc.\n    roles: writing\n    email: rccline@fastmail.fm  \n    corresponding: true\nbibliography: references.bib\n---\n\n\n\n\n\n## Section\nThis is a simple placeholder for the manuscript's main document [@knuth84].\nMine Certinkaya-Rundel presented a webinar on the steps to create a Quarto-Manuscript on March 24, 2024 [@rconsortiumMedicineQuartoReproducible2024]^[C.f. YouTube presentation  *https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s*]  \n\n## Study outcomes  \n\n\n\n\n\n{{< embed notebooks/incidences.qmd#fig-incidences-adverse-events >}}\n\n\n\n\n\n\n\n\n**Note**: a git clone distributee merely runs *quarto render index.qmd* to generate the quarto files that were \nlisted as .quarto/ in the .gitignore file.  \n\n## References \n\n\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code .hidden}\nlibrary(knitr)\nlibrary(quarto)\n\n\nquarto::quarto_render(\"index.qmd\", output_format = \"html\")\nquarto::quarto_render(\"index.qmd\", output_format = \"pdf\")\n\n# cannot render plos-pdf.  See video 28 minutes. \n# quarto::quarto_render(\"index.qmd\", output_format = \"plos-pdf\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

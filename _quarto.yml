@@ -9,13 +9,18 @@ format:
     comments:
       hypothesis: true
   docx: default
-  jats: default
+# jats: default # binder
+#  pdf: default
+#  plos-pdf:
+#    keep-tex: true
+    
+  
 
   # (other formats)
   # pdf: default
 
 execute:
-  freeze: true
+  freeze: auto
 
 
 

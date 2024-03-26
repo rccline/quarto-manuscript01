@@ -3,11 +3,11 @@ title: "Instructions"
 editor: visual
 ---
 
-## [Quarto Manuscripts](https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s) 
+## [Quarto Manuscripts](https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s)
 
-Jupyter and Quarto noteboos as a primary element of the scientific record. \
+Jupyter and Quarto noteboos as a primary element of the scientific record.\
 Publish to GitHub Pages, Netlify etc.\
-Project type: manuscript \
+Project type: manuscript\
 Give access via a website
 
 Instructions
@@ -20,23 +20,18 @@ Quarto enables you to weave together content and executable code into a finished
 [Notebooks Now!](https://data.agu.org/notebooks-now/)
 
 Notebooks Now! The Future of Reproducible Research\
-<https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023EA003458> \
+<https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023EA003458>\
 
 ## Create a new project
 
-## In Terminal:  quarto create project manuscript indo-rct
+## In Terminal: quarto create project manuscript indo-rct
 
-## 
+-   \_quarto.yml
 
-```{r}
-1 + 1
-```
+-   index.qmd
 
-You can add options to executable code like this
+-   references.bib
 
-```{r}
-#| echo: false
-2 * 2
-```
+Question: How do you load the plos extension, or other extensions?
 
-The `echo: false` option disables the printing of code (only output is displayed).
+\

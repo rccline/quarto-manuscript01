@@ -1,0 +1,15 @@
+{
+  "hash": "d4c93657dcfa3dd8b2cae6024ca73690",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Quarto-manuscript01\nauthors:\n  - name: Robert C. Cline, Sr.\n    affiliation: Golden Triangle Land Services, Inc.\n    roles: writing\n    corresponding: true\nbibliography: references.bib\n---\n\n\n\n\n## Section\nThis is a simple placeholder for the manuscript's main document [@knuth84].\nMine Certinkaya-Rundel presented a webinar on the steps to create a Quarto-Manuscript on March 24, 2024 [@rconsortiumMedicineQuartoReproducible2024]^[C.f. YouTube presentation  *https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s*]\n\n**Note**: a git clone distributee merely runs *quarto render index.qmd* to generate the quarto files that were \nlisted as .quarto/ in the .gitignore file.  \n\n## References\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code .hidden}\nlibrary(knitr)\nlibrary(quarto)\n# render(\"index.qmd\", output_format = \"quarto::to_html\")\n\n# knitr::render(\"index.qmd\", output_format = \"quarto::to_html\")\n# quarto::render(\"index.qmd\", output_format = \"html_document\")\n# quarto::quarto_render(\"index.qmd\", output_format = \"html_document\")\nquarto::quarto_render(\"index.qmd\", output_format = \"html\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

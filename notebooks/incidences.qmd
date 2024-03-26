@@ -1,0 +1,116 @@
+---
+title: "Incidence"
+output:
+  quarto::quarto_html:
+    toc: true
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+```{r}
+#| label: load-pkgs
+library(tidyverse)
+library(medicaldata)
+library(patchwork)
+
+# data(package = "medicaldata")
+data(indo_rct)
+
+```
+
+
+```{r}
+#| label: fig-incidences-adverse-events
+#| fig-cap: Incidence of the Primary and Secondary End Points and Adverse Events
+#| fig-width: 4
+#| fig-asp: 0.681
+
+# A - moderate to severe missing
+plot_a <- indo_rct |> 
+  count(rx, outcome) |>
+  group_by(rx) |>
+  mutate(p = n / sum(n)) |>
+  filter(outcome == "1_yes") |>
+  ungroup() |>
+  mutate(
+    rx = case_match(
+      rx, 
+      "0_placebo" ~ "Placebo",
+      "1_indomethacin" ~ "Indomethacin"
+    ),
+    rx = fct_relevel(rx, "Placebo", "Indomethacin"),
+    p = p*100
+  ) |>
+  ggplot(aes(x = rx, y = p, fill = rx)) +
+  geom_col(color = "black") +
+  scale_fill_manual(
+    values = c(
+      "Placebo" = "azure2", 
+      "Indomethacin" =  "deepskyblue4"
+    )
+  ) + 
+  theme_classic() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank()
+  ) +
+  ylim(0, 20) +
+  labs(
+    x = "All Post-ERCP\nPancreatitis",
+    y = "Patients (%)",
+    fill = NULL
+  )
+
+# renal failure missing
+plot_b <- indo_rct |>
+  filter(bleed == 1) |>
+  mutate(
+    rx = case_match(
+      rx, 
+      "0_placebo" ~ "Placebo",
+      "1_indomethacin" ~ "Indomethacin"
+      ),
+    rx = fct_relevel(rx, "Placebo", "Indomethacin")
+  ) |>
+  count(rx, bleed) |>
+  ggplot(aes(x = rx, y = n, fill = rx)) +
+  geom_col(color = "black") +
+  scale_fill_manual(
+    values = c(
+      "Placebo" = "azure2", 
+      "Indomethacin" =  "deepskyblue4"
+    )
+  ) + 
+  theme_classic() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank()
+  ) +
+  ylim(0, 8) +
+  labs(
+    x = "Gastrointestinal\nBleeding",
+    y = "No. of Adverse Events",
+    fill = NULL
+  )
+
+plot_a + plot_b
+```
