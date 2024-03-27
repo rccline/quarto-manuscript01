@@ -78,6 +78,11 @@ Reference for (@fig-incidences-adverse-events). Citation: [@elmunzer2012]
 
 ## Add .github reference  
 
+*<u>It may have to be added to [github pages](https://quarto.org/docs/publishing/github-pages.html)</u>*
+
+**Add github url to _quarto.yml** 
+ *repository: https://github.com/rccline/quarto-manuscript01.git*
+
 **To create a .github folder** in your project directory and *set up your Quarto manuscript to reference the GitHub repository upon rendering*, you can follow these steps:
 
 **Create the .github Folder**:

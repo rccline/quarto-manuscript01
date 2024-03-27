@@ -183,6 +183,29 @@
 \begin{document}
 \maketitle
 
+\subsection{Quarto manuscripts:
+https://quarto.org/docs/manuscripts}\label{quarto-manuscripts-httpsquarto.orgdocsmanuscripts}
+
+\subsubsection{Slides}\label{slides}
+
+\begin{itemize}
+\tightlist
+\item
+  mine.quarto.pub/quarto-manuscdripts-rmed\\
+\item
+  github.com/mine-cetinkaya-rundel/quarto-manuscrpts-rmed
+\end{itemize}
+
+\subsubsection{Manuscript:}\label{manuscript}
+
+\begin{itemize}
+\tightlist
+\item
+  mine-cetinkaya-rundel.github.io/indo-rct\\
+\item
+  github.com/mine-cetinkaya-rundel/indo-rct
+\end{itemize}
+
 \subsection{Section}\label{section}
 
 This is a simple placeholder for the manuscript's main document (Knuth
@@ -209,9 +232,133 @@ and Secondary End Points and Adverse Events}
 \textsubscript{Source:
 \href{https://rccline.github.io/quarto-manuscript01/notebooks/incidences-preview.html\#cell-fig-incidences-adverse-events}{Incidence}}
 
+\textsubscript{Source:
+\href{https://rccline.github.io/quarto-manuscript01/index.qmd.html}{Article
+Notebook}}
+
+\textbf{This is an example of inline code}:\\
+The mean body mass of penguins is 4201.75 grams.\\
+What if we use a label ((\textbf{penguin\_bodymass?}))
+
+\textbf{Cross-referencing}
+
+\begin{itemize}
+\tightlist
+\item
+  This is a cross-reference to our
+  (Figure~\ref{fig-incidences-adverse-events}).\\
+\item
+  You can also bring up the \emph{cross-reference-insert-anything tool}
+  by typing:
+\end{itemize}
+
+\subsection{Citations}\label{citations}
+
+In Visual mode: Insert citation or, control-shift-F8 (Hennekens et al.
+1996)
+
+This is a sample citation from a paper published in 2012 which you can
+find at: https://pubmed.ncbi.nlm.nih.gov/8929364/ DOI:
+10.1056/NEJM199611283352207
+
+Reference for (Figure~\ref{fig-incidences-adverse-events}). Citation:
+(Elmunzer et al. 2012)
+
+\textsubscript{Source:
+\href{https://rccline.github.io/quarto-manuscript01/index.qmd.html}{Article
+Notebook}}
+
+\subsection{Quarto use binder}\label{quarto-use-binder}
+
+\begin{itemize}
+\tightlist
+\item
+  In the terminal: quarto use binder\\
+\item
+  Takes a bit of time for the virtual environment being built.
+\item
+  Edit in Rstudio
+\end{itemize}
+
 \textbf{Note}: a git clone distributee merely runs \emph{quarto render
 index.qmd} to generate the quarto files that were listed as .quarto/ in
 the .gitignore file.
+
+\subsection{Add .github reference}\label{add-.github-reference}
+
+\emph{It may have to be added to
+\href{https://quarto.org/docs/publishing/github-pages.html}{github
+pages}}
+
+**Add github url to \_quarto.yml** \emph{repository:
+https://github.com/rccline/quarto-manuscript01.git}
+
+\textbf{To create a .github folder} in your project directory and
+\emph{set up your Quarto manuscript to reference the GitHub repository
+upon rendering}, you can follow these steps:
+
+\textbf{Create the .github Folder}:
+
+Open your project directory in your file explorer. Right-click within
+the directory and choose ``New Folder'' or create a new folder named
+\emph{.github}.
+
+\textbf{Add Necessary Files}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{publish.yml* Inside the .github folder, create a new file
+  named workflows (without an extension). In this workflows folder,
+  create a YAML file with a name like }\emph{publish.yml}**. You can
+  name it anything, but it's common to name it after the action it
+  performs or the tool it configures.
+\item
+  Open the \emph{publish.yml} file in a text editor and add the
+  necessary configuration for your workflow. Below is an example of how
+  you might configure it to reference your GitHub repository:
+\end{enumerate}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{0.9861}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+` name: Quarto Render \\
+on: -\textgreater{} push: -\textgreater-\textgreater{} branches:
+-\textgreater-\textgreater-\textgreater{} - master \\
+jobs: -\textgreater{} render: -\textgreater-\textgreater{} runs-on:
+ubuntu-latest -\textgreater-\textgreater{} steps:
+-\textgreater-\textgreater-\textgreater{} - name: Checkout Repository
+-\textgreater-\textgreater-\textgreater{} uses: actions/checkout@v2
+-\textgreater-\textgreater-\textgreater{} - name: Render Quarto
+Manuscript -\textgreater-\textgreater-\textgreater{} run: quarto
+render \\
+` \\
+\end{longtable}
+
+\subsection{\texorpdfstring{freeze in \emph{Yaml}
+\_quarto.yml*}{freeze in Yaml \_quarto.yml*}}\label{freeze-in-yaml-_quarto.yml}
+
+47 minutes
+
+execute: freeze: auto
+
+\begin{itemize}
+\tightlist
+\item
+  freeze
+
+  \begin{itemize}
+  \tightlist
+  \item
+    unless I have explicitly touched a qmd file, do not rerun the code
+    in it
+  \item
+    \emph{freeze: false} - means always rerun the code
+  \end{itemize}
+\end{itemize}
 
 \subsection{References}\label{references}
 
@@ -221,6 +368,21 @@ Notebook}}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-elmunzer2012}
+Elmunzer, B. Joseph, James M. Scheiman, Glen A. Lehman, Amitabh Chak,
+Patrick Mosler, Peter D. R. Higgins, Rodney A. Hayward, et al. 2012.
+{``A Randomized Trial of Rectal Indomethacin to Prevent Post-ERCP
+Pancreatitis.''} \emph{New England Journal of Medicine} 366 (15):
+1414--22. \url{https://doi.org/10.1056/nejmoa1111103}.
+
+\bibitem[\citeproctext]{ref-hennekens1996}
+Hennekens, Charles H., Christine M. Albert, Susan L. Godfried, J.
+Michael Gaziano, and Julie E. Buring. 1996. {``Adjunctive Drug Therapy
+of Acute Myocardial Infarction {\textemdash} Evidence from Clinical
+Trials.''} Edited by Alastair J. J. Wood. \emph{New England Journal of
+Medicine} 335 (22): 1660--68.
+\url{https://doi.org/10.1056/nejm199611283352207}.
+
 \bibitem[\citeproctext]{ref-knuth84}
 Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Comput. J.} 27
 (2): 97--111. \url{https://doi.org/10.1093/comjnl/27.2.97}.

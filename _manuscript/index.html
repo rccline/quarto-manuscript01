@@ -113,7 +113,7 @@ div.csl-indent {
 
 
     <div class="quarto-other-links-text-target">
-    </div>  </div>
+    <div class="quarto-code-links"><div class="quarto-title-meta-heading">Code Links</div><div class="quarto-title-meta-contents"><span><a href="https://github.com/rccline/quarto-manuscript01.git"><i class="bi bi-github"></i>GitHub</a></span></div></div></div>  </div>
 </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
@@ -213,6 +213,8 @@ What if we use a label (<span class="citation" data-cites="penguin_bodymass">(<a
 </section>
 <section id="add-.github-reference" class="level2">
 <h2 class="anchored" data-anchor-id="add-.github-reference">Add .github reference</h2>
+<p><em><u>It may have to be added to <a href="https://quarto.org/docs/publishing/github-pages.html">github pages</a></u></em></p>
+<p>**Add github url to _quarto.yml** <em>repository: https://github.com/rccline/quarto-manuscript01.git</em></p>
 <p><strong>To create a .github folder</strong> in your project directory and <em>set up your Quarto manuscript to reference the GitHub repository upon rendering</em>, you can follow these steps:</p>
 <p><strong>Create the .github Folder</strong>:</p>
 <p>Open your project directory in your file explorer. Right-click within the directory and choose “New Folder” or create a new folder named <em>.github</em>.</p>
@@ -700,7 +702,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

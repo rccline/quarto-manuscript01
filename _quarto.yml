@@ -3,17 +3,30 @@ project:
 
 manuscript:
   article: index.qmd
+  code-links:
+    - text: GitHub
+      icon: github
+      href: https://github.com/rccline/quarto-manuscript01.git
+    # - text: Binder
+    #   icon: journal
+    #   href: https://mybinder.org/v2/gh/mine-cetinkaya-rundel/indo-rct/HEAD
+    
+
 
 format:
   html:
     comments:
       hypothesis: true
   docx: default
+  pdf: default
 # jats: default # binder
 #  pdf: default
 #  plos-pdf:
 #    keep-tex: true
-    
+
+
+repository: https://github.com/rccline/quarto-manuscript01.git
+
   
 
   # (other formats)

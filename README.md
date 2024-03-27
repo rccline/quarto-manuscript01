@@ -1,7 +1,9 @@
 **quarto-manuscript01**
 ----------------------------------------  
 
-This repository is created for the purpose of learning Quarto Manuscripts, following a tutorial presented by Professor Mine Cetinkaya-Rundel, Duke University, for the [*Reproducible Manuscripts with Quarto*](https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s) talk at posit::conf(2023) and *R Consortium R/Medicine: Quarto for Reproducible Medical Manuscripts* .  
+This repository is created for the purpose of learning Quarto Manuscripts. Not necessarily "pretty" this manuscript contains the elements of a Quarto-Manuscript.
+
+Here, I follow a tutorial presented by Professor Mine Cetinkaya-Rundel, Duke University, for the [*Reproducible Manuscripts with Quarto*](https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s) talk at posit::conf(2023) and *R Consortium R/Medicine: Quarto for Reproducible Medical Manuscripts* .  
 
 Slides for the presentation are hosted at *https://mine.quarto.pub/manuscripts-conf23*.
  
