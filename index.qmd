@@ -26,7 +26,18 @@ bibliography: references.bib
 
 This is a simple placeholder for the manuscript's main document [@knuth84]. Mine Certinkaya-Rundel presented a webinar on the steps to create a Quarto-Manuscript on March 24, 2024 [@rconsortiumMedicineQuartoReproducible2024][^1]
 
-[^1]: C.f. YouTube presentation *https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s*
+[^1]: C.f. YouTube presentation *https://www.youtube.com/watch?v=NK1onTLcgY4&t=1265s* 
+
+## Authoring Manuscripts with Quarto templates  
+* See *YouTube* presentation [Quarto for Academics: at 14:11 Minutes](https://www.youtube.com/watch?v=EbAAmrB0luA&t=237s)
+* See github journal-templates repository: *github.com/quarto-journals* 
+* Mine discusses adding journal templates to a quarto project
+  - <u>In the Terminal of your project, type</u>: 
+  - quarto use template quarto-journals/jasa  
+  - quarto use template quarto-journals/jss  
+  - quarto use template quarto-journals/plos  
+  - quarto use template quarto-journals/biophysical-journal 
+
 
 ## Study outcomes
 

@@ -107,7 +107,7 @@ div.csl-indent {
               </div>
       </div>
       <div class="quarto-title-meta-column-end quarto-other-formats-target">
-      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">Other Formats</div><div class="quarto-title-meta-contents"><p><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></p></div></div></div>
+      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">Other Formats</div><div class="quarto-title-meta-contents"><p><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></p></div></div></div>
     </div>
 
 
@@ -126,6 +126,7 @@ div.csl-indent {
   <li><a href="#manuscript" id="toc-manuscript" class="nav-link" data-scroll-target="#manuscript">Manuscript:</a></li>
   </ul></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">Section</a></li>
+  <li><a href="#authoring-manuscripts-with-quarto-templates" id="toc-authoring-manuscripts-with-quarto-templates" class="nav-link" data-scroll-target="#authoring-manuscripts-with-quarto-templates">Authoring Manuscripts with Quarto templates</a></li>
   <li><a href="#study-outcomes" id="toc-study-outcomes" class="nav-link" data-scroll-target="#study-outcomes">Study outcomes</a></li>
   <li><a href="#citations" id="toc-citations" class="nav-link" data-scroll-target="#citations">Citations</a></li>
   <li><a href="#quarto-use-binder" id="toc-quarto-use-binder" class="nav-link" data-scroll-target="#quarto-use-binder">Quarto use binder</a></li>
@@ -166,6 +167,24 @@ div.csl-indent {
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section">Section</h2>
 <p>This is a simple placeholder for the manuscript’s main document <span class="citation" data-cites="knuth84">(<a href="#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span>. Mine Certinkaya-Rundel presented a webinar on the steps to create a Quarto-Manuscript on March 24, 2024 <span class="citation" data-cites="rconsortiumMedicineQuartoReproducible2024">(<a href="#ref-rconsortiumMedicineQuartoReproducible2024" role="doc-biblioref">R Consortium 2024</a>)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="authoring-manuscripts-with-quarto-templates" class="level2">
+<h2 class="anchored" data-anchor-id="authoring-manuscripts-with-quarto-templates">Authoring Manuscripts with Quarto templates</h2>
+<ul>
+<li>See <em>YouTube</em> presentation <a href="https://www.youtube.com/watch?v=EbAAmrB0luA&amp;t=237s">Quarto for Academics: at 14:11 Minutes</a></li>
+<li>See github journal-templates repository: <em>github.com/quarto-journals</em></li>
+<li>Mine discusses adding journal templates to a quarto project
+<ul>
+<li><u>In the Terminal of your project, type</u>:</li>
+<li>quarto use template quarto-journals/jasa<br>
+</li>
+<li>quarto use template quarto-journals/jss<br>
+</li>
+<li>quarto use template quarto-journals/plos<br>
+</li>
+<li>quarto use template quarto-journals/biophysical-journal</li>
+</ul></li>
+</ul>
 </section>
 <section id="study-outcomes" class="level2">
 <h2 class="anchored" data-anchor-id="study-outcomes">Study outcomes</h2>
@@ -702,7 +721,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
